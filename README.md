@@ -15,7 +15,11 @@
 | Duyarlılık (Recall) | %95,5 |
 | Yanlış pozitif | 0 |
 
-SHAP analizine göre nükste en belirleyici üç faktör: **tedaviye yanıt**, **ATA risk grubu** ve **tümör evresi (T)**. Bu sonuç klinik kılavuzlarla uyumlu.
+<p align="center"><img src="docs/shap_ozet.png" width="520" alt="SHAP özet grafiği"></p>
+
+SHAP analizine göre nükste en belirleyici değişkenler **tedaviye yanıt** ve **ATA risk grubu**. Bunları yaş ve lenf nodu tutulumu (N) izliyor. Bu sıralama klinik kılavuzlarla uyumlu.
+
+<p align="center"><img src="docs/roc_egrileri.png" width="520" alt="8 modelin ROC eğrileri"></p>
 
 ## Veri ve yöntem
 
@@ -27,7 +31,7 @@ SHAP analizine göre nükste en belirleyici üç faktör: **tedaviye yanıt**, *
 ## Çalıştırma
 
 ```bash
-pip install pandas numpy scikit-learn xgboost lightgbm catboost shap matplotlib seaborn
+pip install -r requirements.txt
 jupyter notebook tiroid_nuks_tahmini.ipynb
 ```
 
